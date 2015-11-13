@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -24,10 +24,10 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="bgd_white">#ffffff</color>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -77,7 +77,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="tv_bgd_blue">#aaaaad</color>
     <color name="tv_bgd_gray">#777777</color>
@@ -109,7 +109,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -220,55 +220,55 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings_main.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings_main.xml -->
     <eat-comment/>
     <string name="app_name">下载</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="download">下载中</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings_item_download.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings_item_download.xml -->
     <eat-comment/>
     <string name="download_pause">暂停</string>
     <string name="download_progress">下载进度</string>
     <string name="download_rate">下载速度</string>
     <string name="download_start">开始</string>
     <string name="file_name">文件名</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings_main.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings_main.xml -->
     <eat-comment/>
     <string name="main_download">下载中</string>
     <string name="main_over">已完成</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings_pull_to_refresh.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings_pull_to_refresh.xml -->
     <eat-comment/>
     <string name="not_updated_yet">暂未更新过</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="over">已完成</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings_item_over.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings_item_over.xml -->
     <eat-comment/>
     <string name="over_delete">删除</string>
     <string name="over_file_name">文件名</string>
     <string name="over_look_file">查看</string>
     <string name="over_other">ok</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings_pull_to_refresh.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings_pull_to_refresh.xml -->
     <eat-comment/>
     <string name="pull_to_refresh">下拉可以刷新</string>
     <string name="refreshing">正在刷新…</string>
     <string name="release_to_refresh">释放立即刷新</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/strings_pull_to_refresh.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/strings_pull_to_refresh.xml -->
     <eat-comment/>
     <string name="time_error">时间有问题</string>
     <string name="updated_at">上次更新于%1$s前</string>
     <string name="updated_just_now">刚刚更新</string>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!--
@@ -280,7 +280,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1428,7 +1428,7 @@
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
     </style>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="TextStyle">
         <item name="android:height">50dp</item>
@@ -1436,7 +1436,7 @@
    		<item name="android:width">0dp</item>
 		<item name="android:gravity">center</item>
     </style>
-    <!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Administrator/MultiThreadingBreakpointContinuinglyDownload/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>
