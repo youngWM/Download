@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- 本应用的名称 -->
+    <string name="app_name">下载</string>
+    
+    <!-- 状态栏显示 -->
+    <string name="main_download">下载中</string>
+    <string name="main_over">已完成</string>
+    
+    
+
+</resources>

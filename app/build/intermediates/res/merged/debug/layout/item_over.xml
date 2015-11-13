@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/over_tv_file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="2"
+        android:maxEms="13"
+        android:singleLine="true"
+        android:text="@string/over_file_name"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/over_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@id/over_tv_file_name"
+        android:text="@string/over_other"
+        android:textSize="16sp"
+        android:textColor="#aaaaaa" />
+
+   
+    <Button
+        android:id="@+id/over_btn_delete"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:focusable="false"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/over_delete" />
+    
+    
+     <FrameLayout 
+         android:layout_width="match_parent"
+   		 android:layout_height="wrap_content">
+        <CheckBox
+         android:id="@+id/over_checkBox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:focusable="false"
+         android:layout_gravity="right"
+         android:layout_margin="9dp"
+         android:visibility="gone"
+          />
+        
+    </FrameLayout>
+
+     
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Administrator/WorkSpace_AS/Download6/app/src/main/res/layout/item_over.xml -->

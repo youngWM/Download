@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+     <com.download.pulltoresh.RefreshableView
+        android:id="@+id/refreshable_view_download"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+		<ListView 
+		    android:id="@+id/lv_download"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    ></ListView>    
+
+	</com.download.pulltoresh.RefreshableView>
+	
+      <Button 
+        android:id="@+id/download_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom"
+        android:text="全部下载"/>
+</FrameLayout>

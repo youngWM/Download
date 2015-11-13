@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="DefaultLocale">
+        <ignore path="src/com/download/fragment/FragmentDownload.java" />
+        <ignore path="src/com/download/tools/Tools.java" />
+        <ignore path="src/com/download/tools/URLTools.java" />
+    </issue>
+    <issue id="HandlerLeak">
+        <ignore path="src/com/download/fragment/FragmentDownload.java" />
+        <ignore path="src/com/download/servers/DownloadService.java" />
+    </issue>
+</lint>

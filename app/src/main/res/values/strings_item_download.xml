@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 下载fragment的item -->
+    <string name="file_name">文件名</string>
+    <string name="download_rate">下载速度</string>
+    <string name="download_progress">下载进度</string>
+    
+    <string name="download_start">开始</string>
+    <string name="download_pause">暂停</string>
+    
+</resources>

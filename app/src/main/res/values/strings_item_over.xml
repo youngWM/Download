@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 已下载over的item -->
+    
+    <string name="over_other">ok</string>
+    <string name="over_file_name">文件名</string>
+    <string name="over_delete">删除</string>
+    <string name="over_look_file">查看</string>
+    
+</resources>

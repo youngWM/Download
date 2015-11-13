@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="bgd_white">#ffffff</color>
+    
+    <color name="tv_bgd_blue">#aaaaad</color>
+    <color name="tv_bgd_gray">#777777</color>
+</resources>
