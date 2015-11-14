@@ -8,9 +8,15 @@
 <br>1、下拉刷新发送下载请求给service端，等待接收到应答后，解析返回的json数据并显示在Listview中；
 <br>2、点击【下载】下载该文件，点击【暂停】暂停下载；
 <br>3、下载结束后，下载文件信息在【已完成】界面显示；
+![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/pullRefresh-downAndPause.gif)
 <br>4、点击【全部下载】，开启全部文件下载，点击【全部暂停】暂停所有下载；
+![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/allDownload.gif)
 <br>5、listView获取并显示下载文件后，点击【下载】按键后在数据库记录下载线程信息，可通过RE浏览器查下；
+![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/lookDatabase.gif)
 <br>6、在退出时，在OnDestroy（）调用全部暂停方法，存储下载进度；
+![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/allPause.gif)
+<br>
+<br>
 ##一、listView的baseAdapter的使用机制：
 <br>
 **1、ListView中getView的原理：**
