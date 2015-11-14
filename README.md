@@ -1,5 +1,10 @@
 #Android 多线程断点下载project总结
-								2015.11.8  youngwm
+											2015.11.8  youngwm
+###写在前头的前言O(∩_∩)O：
+<br>此断点续传下载是以我通过慕课网http://www.imooc.com/learn/363的学习后，在实现的基础上，解决了
+<br>其中的bug，并对代码进行优化。之前未曾接触过的同学可以通过该视频了解断点续传下载的相关原理。
+<br>####功能介绍：
+<br>
 ##一、listView的baseAdapter的使用机制：
 <br>
 **1、ListView中getView的原理：**
@@ -13,7 +18,7 @@
 	private static class ViewHolder{}  // 定义为static内部静态类，这样就只生成一次，比较不耗内存
 ```
 ``` java
-@Override
+	@Override
 	public View getView(final int position, View view, ViewGroup ViewGroup) {
 		if(view == null){
 			view = LayoutInflater.from(mContext).inflate(R.layout.item_download, null);
