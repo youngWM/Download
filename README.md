@@ -1,7 +1,8 @@
 #Android 多线程断点下载project总结
 											2015.11.8  youngwm
 ###写在前头的前言O(∩_∩)O：
-<br>此断点续传下载是以我通过慕课网http://www.imooc.com/learn/363 的学习后，在实现的基础上，解决了
+<br>此断点续传下载是以我通过慕课网
+[Android-Service系列之断点续传下载](http://www.imooc.com/learn/363) 的学习后，在实现的基础上，解决了
 <br>其中的bug，并对代码进行优化。之前未曾接触过的同学可以通过该视频了解断点续传下载的相关原理。
 <br>**功能介绍：**
 <br>1、下拉刷新发送下载请求给service端，等待接收到应答后，解析返回的json数据并显示在Listview中；
@@ -358,7 +359,7 @@
 <br>
 <br>
 **6、快速连续点击不同文件的下载按键，程序崩溃，系统提示：**
-···java
+```java
     Java.lang.IllegalStateException: Cannot perform this operation because the connection 
     Pool has been closed.
 ```
