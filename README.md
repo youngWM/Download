@@ -3,32 +3,33 @@
 <br>
 <br>
 ###写在前头的前言O(∩_∩)O：
-<br>
 <br>此断点续传下载是以我通过慕课网
-[Android-Service系列之断点续传下载](http://www.imooc.com/learn/363) 的学习后，在实现的基础上，解决了
-<br>其中的bug，并对代码进行优化。之前未曾接触过的同学可以通过该视频了解断点续传下载的相关原理。
+[Android-Service系列之断点续传下载](http://www.imooc.com/learn/363) 的学习后，在实现的基础上，解决了其中的bug，并对代码进行优化。之前未曾接触过的同学可以通过该视频了解断点续传下载的相关原理。
+<br>
 <br>**功能介绍：**
-<br>1、下拉刷新发送下载请求给service端，等待接收到应答后，解析返回的json数据并显示在Listview中；
-<br>2、点击【下载】下载该文件，点击【暂停】暂停下载；
-<br>3、下载结束后，下载文件信息在【已完成】界面显示；(下面有GIF图，载出时间较长，可稍后查看)
+<br>
+<br>**1、**下拉刷新发送下载请求给service端，等待接收到应答后，解析返回的json数据并显示在Listview中；
+<br>**2、**点击【下载】下载该文件，点击【暂停】暂停下载；
+<br>**3、**下载结束后，下载文件信息在【已完成】界面显示；(下面有GIF图，载出时间较长，可稍后查看)
 <br>
 <br>![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/pullRefresh-downAndPause.gif)
-<br>4、点击【全部下载】，开启全部文件下载，点击【全部暂停】暂停所有下载；(下面有GIF图，载出时间较长，可稍后查看)
+<br>**4、**点击【全部下载】，开启全部文件下载，点击【全部暂停】暂停所有下载；(下面有GIF图，载出时间较长，可稍后查看)
 <br>
 <br>![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/allDownload.gif)
-<br>5、listView获取并显示下载文件后，点击【下载】按键后在数据库记录下载线程信息，可通过RE浏览器查下；(下面有GIF图，载出时间较长，可稍后查看)
+<br>**5、**listView获取并显示下载文件后，点击【下载】按键后在数据库记录下载线程信息，可通过RE浏览器查下；(下面有GIF图，载出时间较长，可稍后查看)
 <br>
 <br>![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/lookDatabase.gif)
-<br>6、在退出时，在OnDestroy（）调用全部暂停方法，存储下载进度；(下面有GIF图，载出时间较长，可稍后查看)
+<br>**6、**在退出时，在OnDestroy（）调用全部暂停方法，存储下载进度；(下面有GIF图，载出时间较长，可稍后查看)
 <br>
 <br>![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/allPause.gif)
 <br>
 <br>
 <br>**下载使用注意事项：**
-<br>文件目录下的tomcat_servlet/webService是servlet，作为web服务器（不懂的可百度谷歌tomcat和servlet）。
-<br>使用前修改目录下app/src/main/java/com/download/entities/DownloadConfig.java中的 
+<br>
+<br>**1、**文件目录下的tomcat_servlet/webService是servlet，作为web服务器（不懂的可百度谷歌tomcat和servlet）。
+<br>**2、**使用前修改目录下app/src/main/java/com/download/entities/DownloadConfig.java中的 
 <br>URL = "http://192.168.254.158:8080/"为和你手机同局域网的ip；
-<br>手机和pc需处于同一局域网。
+<br>**3、**手机和pc需处于同一局域网。
 <br>
 
 ##一、listView的baseAdapter的使用机制：
