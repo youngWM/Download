@@ -19,7 +19,7 @@
 <br>**5、**listView获取并显示下载文件后，点击【下载】按键后在数据库记录下载线程信息，可通过RE浏览器查下；(下面有GIF图，载出时间较长，可稍后查看)
 <br>
 <br>![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/lookDatabase.gif)
-<br>**6、**在退出时，在OnDestroy（）调用全部暂停方法，存储下载进度；(下面有GIF图，载出时间较长，可稍后查看)
+<br>**6、**在退出时，在OnDestroy（）调用全部暂停方法，存储下载进度，进入后初始化显示下载进度；(下面有GIF图，载出时间较长，可稍后查看)
 <br>
 <br>![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/allPause.gif)
 <br>
@@ -28,9 +28,13 @@
 <br>
 <br>**1、**文件目录下的tomcat_servlet/webService是servlet，作为web服务器（不懂的可百度谷歌tomcat和servlet）。
 <br>**2、**使用前修改目录下app/src/main/java/com/download/entities/DownloadConfig.java中的 
-<br>URL = "http://192.168.254.158:8080/"为和你手机同局域网的ip；
-<br>**3、**手机和pc需处于同一局域网。
+<br>URL = "http://192.168.254.158:8080/"为PC端的ip；
+<br>**3、**手机和pc需处于同一局域网内。
 <br>
+<br>**本demo还有许多需要优化的地方，像【全部下载】开启多个下载进程时，同一时间只能下载3个其它的进入等待状态；
+<br>像【已完成】界面的删除功能，可添加复选框选择删除项和全部删除功能...希望有兴趣的同学可以一起来优化，
+<br>欢迎交流O(∩_∩)O~~**
+
 
 ##一、listView的baseAdapter的使用机制：
 <br>
