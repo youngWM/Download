@@ -1,6 +1,9 @@
 #Android 多线程断点下载project总结
 											2015.11.8  youngwm
+<br>
+<br>
 ###写在前头的前言O(∩_∩)O：
+<br>
 <br>此断点续传下载是以我通过慕课网
 [Android-Service系列之断点续传下载](http://www.imooc.com/learn/363) 的学习后，在实现的基础上，解决了
 <br>其中的bug，并对代码进行优化。之前未曾接触过的同学可以通过该视频了解断点续传下载的相关原理。
@@ -21,6 +24,13 @@
 <br>![](https://github.com/youngWM/Download/blob/master/tomcat_servlet/allPause.gif)
 <br>
 <br>
+<br>**下载使用注意事项：**
+<br>文件目录下的tomcat_servlet/webService是servlet，作为web服务器（不懂的可百度谷歌tomcat和servlet）。
+<br>使用前修改目录下app/src/main/java/com/download/entities/DownloadConfig.java中的 
+<br>URL = "http://192.168.254.158:8080/"为和你手机同局域网的ip；
+<br>手机和pc需处于同一局域网。
+<br>
+
 ##一、listView的baseAdapter的使用机制：
 <br>
 **1、ListView中getView的原理：**
