@@ -462,6 +462,12 @@
 <br>
 <br>
 <br>
+**16、退出应用后，通过系统关闭该应用进程后，系统Toast提示该应用已停止。**
+<br>**解决：**在配置文件manifest.xml的activity中声明launchMode类型为：android:launchMode="singleTask"
+<br>http://blog.csdn.net/liuhe688/article/details/6754323
+<br>
+<br>
+<br>
 <br>
 #小知识点
 **1、设置文字显示的数字含两位小数：**
