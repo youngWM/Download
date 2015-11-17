@@ -124,7 +124,7 @@
 <br>
 **3、数据库帮助类：多线程的数据库操作——单例模式**
 <br> http://blog.csdn.net/zs234/article/details/7203141
-<br>http://www.open-open.com/lib/view/open1421307463625.html
+<br>http://www.open-open.com/lib/view/open1421307463625.html （解决Android中的SQLite数据库并发访问）
 <br>
 <br>多线程操作数据库时注意使用**【单例模式】**
 <br>1、构造方法定为private
