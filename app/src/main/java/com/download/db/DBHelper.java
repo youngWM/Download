@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * 数据库帮助类
  * 多线程操作数据库时注意使用【单例模式】
@@ -13,6 +15,9 @@ import android.database.sqlite.SQLiteOpenHelper;
  *    使该方法无论调用多少次，该类都是唯一。
  */
 public class DBHelper extends SQLiteOpenHelper{
+
+	private AtomicInteger mOpenCounter = new AtomicInteger();
+	private SQLiteDatabase mDatabase;
 	/**
 	 * 数据库名称
 	 */
@@ -96,6 +101,22 @@ public class DBHelper extends SQLiteOpenHelper{
 	}
 
 
+	public synchronized SQLiteDatabase openDatabase() {
+		if(mOpenCounter.incrementAndGet() == 1) {
+			// Opening new database
+			mDatabase = sHelper.getWritableDatabase();
+		}
+		return mDatabase;
+	}
+
+
+	public synchronized void closeDatabase() {
+		if(mOpenCounter.decrementAndGet() == 0) {
+			// Closing database
+			mDatabase.close();
+
+		}
+	}
 	/**
 	 * 创建表
 	 */

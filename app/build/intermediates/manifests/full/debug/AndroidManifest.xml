@@ -20,7 +20,9 @@
         android:theme="@style/AppTheme" >
 
         <!-- 注册主活动 -->
-        <activity android:name="com.download.activity.MainActivity" >
+        <activity
+            android:name="com.download.activity.MainActivity"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

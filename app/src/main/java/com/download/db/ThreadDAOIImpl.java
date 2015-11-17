@@ -1,10 +1,5 @@
 package com.download.db;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,6 +9,11 @@ import com.download.entities.DownloadConfig;
 import com.download.entities.FileInfo;
 import com.download.entities.ThreadInfo;
 import com.download.tools.URLTools;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * 【数据库访问接口的实现】
  */
@@ -41,7 +41,7 @@ public class ThreadDAOIImpl implements ThreadDAO{
 	@Override
 	public synchronized void insertThread(ThreadInfo threadInfo ){
 		//---------------
-		SQLiteDatabase db = mDBHelper.getWritableDatabase();  // 实例化数据库，设置为【读写】模式
+		SQLiteDatabase db = mDBHelper.openDatabase();  // 实例化数据库，设置为【读写】模式
 		db.execSQL( "insert into " +DBHelper.TABLE_NAME
 						+ " ( "+DBHelper.THREAD_ID +","
 						+DBHelper.URL       +","
@@ -57,36 +57,28 @@ public class ThreadDAOIImpl implements ThreadDAO{
 						threadInfo.getFinished(),threadInfo.getMd5(),
 						threadInfo.getOver()    ,threadInfo.getOvertime()   } // 插入数据
 		);
-		db.close();  // 关闭数据库
+
+		mDBHelper.closeDatabase();  // 关闭数据库
 	}
 
 	/**
 	 * 【删除文件下载信息】
-	 * 多线程数据库的增、删、改（更新）方法用synchronized修饰，以保证线程安全：
-	 * 保证同一时间段不会有多个（只有一个）线程对数据库进行增删改，需等待线程执
-	 * 行完后再开启线程执行下一个功能；而查询因为不用操作数据库，不会导致 数据库
-	 * 死锁  ，所以不用
 	 */
 	@Override
 	public synchronized void deleteThread(String url) {
-		SQLiteDatabase db = mDBHelper.getWritableDatabase();
+		SQLiteDatabase db = mDBHelper.openDatabase();
 		db.execSQL( "delete from thread_info where url = ?",
 				new Object[] {url});
-		db.close();
+        mDBHelper.closeDatabase();
 	}
 
 
 	/**
 	 * 【更新下载文件下载进度】
-	 * 多线程数据库的增、删、改（更新）方法用synchronized修饰，以保证线程安全：
-	 * 保证同一时间段不会有多个（只有一个）线程对数据库进行增删改，需等待线程执
-	 * 行完后再开启线程执行下一个功能；而查询因为不用操作数据库，不会导致 数据库
-	 * 死锁  ，所以不用
-	 * @see com.download.db.ThreadDAO#updateThread(java.lang.String, int, int, java.lang.String)
 	 */
 	@Override
 	public synchronized void updateThread(String url, int thread_id, int finished, String md5, String over, String over_time) {
-		SQLiteDatabase db = mDBHelper.getWritableDatabase();
+		SQLiteDatabase db = mDBHelper.openDatabase();
 		db.execSQL( "update " +DBHelper.TABLE_NAME + " set "
 						+DBHelper.FINISHED+" = ?where " +DBHelper.URL       +" =? and "
 						+DBHelper.THREAD_ID +" =?",
@@ -95,11 +87,11 @@ public class ThreadDAOIImpl implements ThreadDAO{
 						+DBHelper.OVER+" = ?where " +DBHelper.URL       +" =? and "
 						+DBHelper.THREAD_ID +" =?",
 				new Object[] {over, url, thread_id});
-		db.execSQL( "update " +DBHelper.TABLE_NAME + " set "
-						+DBHelper.OVER_TIME+" = ?where " +DBHelper.URL  +" =? and "
-						+DBHelper.THREAD_ID +" =?",
-				new Object[] {over_time, url, thread_id});
-		db.close();
+		db.execSQL("update " + DBHelper.TABLE_NAME + " set "
+						+ DBHelper.OVER_TIME + " = ?where " + DBHelper.URL + " =? and "
+						+ DBHelper.THREAD_ID + " =?",
+				new Object[]{over_time, url, thread_id});
+        mDBHelper.closeDatabase();
 	}
 
 
@@ -115,6 +107,7 @@ public class ThreadDAOIImpl implements ThreadDAO{
 		List<ThreadInfo> list = new ArrayList<ThreadInfo>();
 		Cursor cursor = db.rawQuery("select * from " +DBHelper.TABLE_NAME
 				+ " where " +DBHelper.URL +" =?", new String[]{url} );
+
 		while (cursor.moveToNext()) {
 			ThreadInfo threadInfo = new ThreadInfo();
 			threadInfo.setId(cursor.getInt(cursor.getColumnIndex(DBHelper.THREAD_ID)));
@@ -132,7 +125,7 @@ public class ThreadDAOIImpl implements ThreadDAO{
 	}
 
 	/**
-	 * 获取数据库中所有下载文件的下载信息
+	 * 获取数据库中所有下载文件的信息
 	 * @return List<ThreadInfo> 包含下载线程信息的list集
 	 */
 	@Override
@@ -175,7 +168,7 @@ public class ThreadDAOIImpl implements ThreadDAO{
 
 
 	/**
-	 * 文件下载信息是否已存在
+	 * 文件下载是否已完成
 	 * @return 当存在下载信息返回true；否则返回false
 	 */
 	@Override
@@ -207,21 +200,5 @@ public class ThreadDAOIImpl implements ThreadDAO{
 		return over;
 	}
 
-	/**
-	 * 文件下载信息是否已存在
-	 * @return 当存在下载信息返回true；否则返回false
-	 */
-	@Override
-	public boolean isExists(String url, int thread_id) {
-
-		SQLiteDatabase db = mDBHelper.getWritableDatabase();
-		Cursor cursor = db.rawQuery("select * from thread_info where url = ? and thread_id = ?",
-				new String[]{url, 0+ ""} );
-		boolean exists = cursor.moveToNext();
-		cursor.close();
-		db.close();
-
-		return exists;
-	}
 
 }

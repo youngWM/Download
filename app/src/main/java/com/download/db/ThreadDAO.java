@@ -24,10 +24,14 @@ public interface ThreadDAO {
 	 */
 	public void insertThread(ThreadInfo threadInfo);
 
+
+
 	/**
 	 * 删除文件下载信息
 	 */
 	public void deleteThread(String url );
+
+
 
 	/**
 	 * 更新下载文件下载进度
@@ -36,12 +40,13 @@ public interface ThreadDAO {
 	 * @param finished   下载线程的文件已下载字节数
 	 * @param md5   下载文件的md5
 	 * @param over   文件下载完成标识
+	 * @param over_time   文件下载完成时间
 	 */
-	public void updateThread(String url, int thread_id,int finished, String md5, String over, String over_time);
+	public void  updateThread(String url, int thread_id, int finished, String md5, String over, String over_time) ;
 
 
 	/**
-	 * 查询文件的文件下载信息
+	 * 查询文件的文件下载线程信息
 	 * @param url  下载线程的URL
 	 * @return  List<ThreadInfo> 线程信息集
 	 */
@@ -55,14 +60,13 @@ public interface ThreadDAO {
 	 */
 	public List<FileInfo> getDBFileInfoList();
 
+
 	/**
-	 * 文件下载信息是否已存在
+	 * 文件下载信息是否已结束下载
 	 * @return 当存在下载信息返回true；否则返回false
 	 */
 	boolean isDownloadOver(String url);
 
-
-	boolean isExists(String url, int thread_id);
 
 
 }
